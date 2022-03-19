@@ -1,7 +1,7 @@
 <hr>
 <h2 align="center"><code><a href="https://bloog-proxolo.web.app">See Demo</a></code></h2>
 <hr>
-# Blog
+<h1>Blog</h1>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
 

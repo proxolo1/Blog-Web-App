@@ -1,0 +1,19 @@
+<div class="main">
+    <div class="date">
+        <p [innerText]="blogList.time" class="fw-light"></p>
+        <p [innerText]="blogList.date" class="fw-light"></p>
+        <p [innerText]="blogList.user" class="text-capitalize fw-light"></p>
+    </div>
+    <div id="blog">
+        <div class="container-fluid">
+            <p class=" text-uppercase text-center">
+                {{blogList.title}}
+            </p>
+        </div>
+        <div class="content">
+            <p [innerHTML]="blogList.content"></p>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,34 @@
+.main{
+    width: 100%;
+    display: flex;
+    /* background-color:red; */
+    justify-content:space-evenly
+}
+.profile{
+    width:30%;
+    /* background-color:yellow; */
+    display: block;
+}
+.blogs{
+    width:50%;
+    height:100%;
+    margin-top:13vh;
+    /* background-color:rgb(37, 140, 199); */
+}
+.mine{
+    /* background-color:orange; */
+    padding-top:50vh;
+}
+.mine p{
+    transform:rotate(-90deg);
+    margin: auto;
+    font-size:3vh;
+    border-bottom: 2px dotted green;
+}
+.detail{
+    margin-top: 20vh;
+    width:100%;
+    height:30%;
+    /* background-color:rgb(16, 66, 158); */
+    text-align:center;
+}

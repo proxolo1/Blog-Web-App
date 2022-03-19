@@ -1,0 +1,26 @@
+.main{
+    display:flex;
+    word-wrap: break-word;
+    /* background-color:yellow; */
+    box-shadow:3px 10px 10px rgb(214, 209, 209);
+    margin-bottom: 5vh;
+}
+#blog{
+    width: 70%;
+    /* background-color:red; */
+    margin: 3vh;
+    
+}
+.date {
+    margin:3vh;
+    width:10vh;
+}
+.date p{
+    margin: 0;
+    font-size:12px;
+}
+.content{
+    height:auto;
+    margin-left: 2vh;
+    
+}

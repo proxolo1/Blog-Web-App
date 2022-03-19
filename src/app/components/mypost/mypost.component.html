@@ -1,0 +1,15 @@
+<div class="main">
+    <div class="profile">
+        <div class="detail">
+            <p><b>Email :</b>{{userEmail}}</p>
+            <p><b>Uid :</b>{{userUid}}</p>
+            <button class="btn btn-primary">logout</button>
+        </div>
+    </div>
+    <div class="mine"><p> My Posts </p></div>
+    <div class="blogs">
+        <div class="frame" *ngFor="let data of item">
+            <app-blog [blogList]="data"></app-blog>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+.main{
+    width:100%;
+    height:100vh;
+    /* background-color: green; */
+}
+.secondary{
+    width: 80%;
+    margin: auto;
+   
+    position: relative;
+    top: 20vh;
+}
+.title{
+    margin: 3vh;
+}
+.title label{
+    margin-bottom: 1vh;
+}
+.e-btn{
+    margin: 2vh;
+}

@@ -1,16 +1,16 @@
-<div class="main">
+<div class="main ">
     <div class="date">
         <p [innerText]="blogList.time" class="fw-light"></p>
         <p [innerText]="blogList.date" class="fw-light"></p>
-        <p [innerText]="blogList.user" class="text-capitalize fw-light"></p>
+        <p [innerText]="blogList.user" class="text-capitalize fw-light text-left"></p>
     </div>
     <div id="blog">
         <div class="container-fluid">
-            <p class=" text-uppercase text-center">
+            <p class=" text-uppercase text-center title">
                 {{blogList.title}}
             </p>
         </div>
-        <div class="content">
+        <div class="content text-focus-in">
             <p [innerHTML]="blogList.content"></p>
         </div>
 

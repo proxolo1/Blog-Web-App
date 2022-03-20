@@ -1,17 +1,137 @@
 <div class="main">
     <div class="secondary">
-    <div class="title">
-        <label for="title">Title :</label>
-        <input type="text" id="title" class="form-control" [(ngModel)]="title">
-    </div>
-    <div class="text-editor">
-        <ejs-richtexteditor #exampleRTE  >
-            <ng-template>
-                <p>hello world</p>
-            </ng-template>
-        </ejs-richtexteditor>
-    </div>
-    <button ej-button id='button' class="e-control e-btn" (click)="getFormattedContent()">Submit</button>
-    </div>
+        <div class="title">
+            <label for="title">Title :</label>
+            <input type="text" id="title" class="form-control" [(ngModel)]="title" placeholder="add title here...">
+        </div>
+        <div class="text-editor">
+            <ejs-richtexteditor #exampleRTE placeholder="Add notes here.....<br> for text format use keyboard shortcuts ">
+                <!-- <ng-template>
+                
+            </ng-template> -->
+            </ejs-richtexteditor>
+        </div>
+        <button ej-button id='button' class="e-control e-btn" (click)="getFormattedContent()">Submit</button>
+        <div class="tbl">
+            <table class="table table-responsive table-hover table-primary">
+                <thead>
+                    <tr>
+                        <th>Actions</th>
+                        <th>Keyboard shortcuts</th>
+                        <th>Actions</th>
+                        <th>Keyboard shortcuts</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                    <tr>
+                        <td>Insert link</td>
+                        <td><kbd>ctrl</kbd> + <kbd>k</kbd></td>
+                         <td>Insert image</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>i</kbd></td>
+                    </tr>
+                    <tr>
+                        <td>Insert table</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>e</kbd></td>
+                        <td>Undo</td>
+                        <td><kbd>ctrl</kbd> + <kbd>z</kbd></td>
+                    </tr>
+                
+                    <tr>
+                          <td>Redo</td>
+                        <td><kbd>ctrl</kbd> + <kbd>y</kbd></td>
+                         <td>Copy</td>
+                        <td><kbd>ctrl</kbd> + <kbd>c</kbd></td>
+                    </tr>
+                   
+                    <tr>
+                        <td>Cut</td>
+                        <td><kbd>ctrl</kbd> + <kbd>x</kbd></td>
+                         <td>Paste</td>
+                        <td><kbd>ctrl</kbd> + <kbd>v</kbd></td>
+                    </tr>
+                    <tr>
+                         <td>Bold</td>
+                        <td><kbd>ctrl</kbd> + <kbd>b</kbd></td>
+                         <td>Italic</td>
+                        <td><kbd>ctrl</kbd> + <kbd>i</kbd></td>
+                    </tr>
+                  
+                    <tr>
+                        <td>Underline</td>
+                        <td><kbd>ctrl</kbd> + <kbd>u</kbd></td>
+                         <td>Strikethrough</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>s</kbd></td>
+                    </tr>
+                   
+                    <tr>
+                        <td>Uppercase</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>u</kbd></td>
+                        <td>Lowercase</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>l</kbd></td>
 
+                    </tr>
+                  
+                    <tr>
+                        <td>Superscript</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>=</kbd></td>
+                        <td>Subscript</td>
+                        <td><kbd>ctrl</kbd> + <kbd>=</kbd></td>
+
+                    </tr>
+                  
+                    <tr>
+                        <td>Indents</td>
+                        <td><kbd>ctrl</kbd> + <kbd>]</kbd></td>
+                        <td>Outdents</td>
+                        <td><kbd>ctrl</kbd> + <kbd>[</kbd></td>
+
+                    </tr>
+                   
+                    <tr>
+                        <td>HTML source</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>h</kbd></td>
+                        <td>Fullscreen</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>f</kbd></td>
+
+                    </tr>
+                  
+                    <tr>
+                        <td>Exit Fullscreen</td>
+                        <td><kbd>Esc</kbd></td>
+                        <td>Justify center</td>
+                        <td><kbd>ctrl</kbd> + <kbd>e</kbd></td>
+
+                    </tr>
+                
+                    <tr>
+                        <td>Justify full</td>
+                        <td><kbd>ctrl</kbd> + <kbd>j</kbd></td>
+                        <td>Justify left</td>
+                        <td><kbd>ctrl</kbd> + <kbd>l</kbd></td>
+
+                    </tr>
+                  
+                    <tr>
+                        <td>Justify right</td>
+                        <td><kbd>ctrl</kbd> + <kbd>r</kbd></td>
+
+                        <td>Clear format</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>r</kbd></td>
+                    </tr>
+                   
+                    <tr>
+                        <td>Ordered list</td>
+                        <td><kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>o</kbd></td>
+
+                        <td>Unordered list</td>
+                        <td><kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>o</kbd></td>
+                    </tr>
+                  
+                </tbody>
+               
+            </table>
+    </div>
+   
+    </div>
 </div>

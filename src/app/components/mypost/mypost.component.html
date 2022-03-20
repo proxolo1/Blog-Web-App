@@ -3,13 +3,18 @@
         <div class="detail">
             <p><b>Email :</b>{{userEmail}}</p>
             <p><b>Uid :</b>{{userUid}}</p>
-            <button class="btn btn-primary">logout</button>
+            <button class="btn btn-primary"(click)="logout()">logout</button>
         </div>
     </div>
     <div class="mine"><p> My Posts </p></div>
     <div class="blogs">
-        <div class="frame" *ngFor="let data of item">
+        <div class="frame swing-in-top-fwd" *ngFor="let data of item">
             <app-blog [blogList]="data"></app-blog>
         </div>
     </div>
+</div>
+<div class="spinner">
+    <div class="spinner-grow text-success"></div>
+    <div class="spinner-grow text-info"></div>
+    <div class="spinner-grow text-danger"></div>
 </div>

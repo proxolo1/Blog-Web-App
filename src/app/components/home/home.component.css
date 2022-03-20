@@ -1,7 +1,7 @@
 .main{
     width: 100%;
-    background-color:#dae0e6;
-  
+    background-color:lightgrey;
+    color:darkblue;
     height: auto;
     z-index: -3;
 }

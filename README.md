@@ -1,5 +1,5 @@
 <hr>
-<h2 align="center"><code><a href="https://bloog-proxolo.web.app">See Demo</a></code></h2>
+<h2 align="center"><code><a href="https://bloog-proxolo.web.app" target="_blank" >See Demo</a></code></h2>
 <hr>
 <h1>Blog</h1>
 

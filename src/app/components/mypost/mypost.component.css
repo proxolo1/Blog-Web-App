@@ -95,4 +95,21 @@
       opacity: 1;
     }
   }
-  
+  @media screen and (max-width: 600px) {
+          .main{
+                  display: flex;
+                  flex-direction: column
+          }
+          .profile{
+                  width: 100%;
+          }
+          .mine{
+                  display:none;
+          }
+          .blogs{
+                  width: 100%;
+          }
+          .spinner{
+                  display: none;
+          }
+  }

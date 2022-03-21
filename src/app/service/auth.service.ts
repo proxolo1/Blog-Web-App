@@ -24,6 +24,7 @@ export class AuthService {
   logOut() {
     console.log('logout')
     this.auth.auth.signOut();
+    localStorage.clear();
   }
   signIn(email: string, password: string) {
     this.auth.auth.signInWithEmailAndPassword(email, password)

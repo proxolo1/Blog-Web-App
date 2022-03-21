@@ -23,13 +23,16 @@ table{
     width: 100%;
     
 }
-#richtexteditor_1913018867_0_toolbar{
-    display:none !important;
+.e-toolbar{
+    display:none;
 }
+/* #richtexteditor_1913018867_0_toolbar{
+    display:none !important;
+} */
 @media screen and (max-width:600px){
-    #richtexteditor_1913018867_0_toolbar{
+    /* #richtexteditor_1913018867_0_toolbar{
         display:block !important;
-    }
+    } */
     .tbl{
         display:none;
     }

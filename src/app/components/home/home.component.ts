@@ -38,9 +38,14 @@ export class HomeComponent implements OnInit {
       console.log(data)
       // console.log('hello')
       switch (val){
-          case null: 
+          case true: 
           this.data=data.sort((a:any,b:any)=>{
             return a.title.localeCompare(b.title);
+          });
+          break;
+          case false: 
+          this.data=data.sort((a:any,b:any)=>{
+            return b.title.localeCompare(a.title);
           });
           break;
           default:
@@ -56,6 +61,7 @@ export class HomeComponent implements OnInit {
   }
 
   timeSort() {
+    this.checkToggle('title','default')
     if (!this.check.time) {
       this.getItems(1);
       this.check.time = true;
@@ -64,7 +70,18 @@ export class HomeComponent implements OnInit {
     this.getItems(-1);
     this.check.time = false;
   }
-  titleSort() {
-    this.getItems(null);
+  titleSort(event:any) {
+    this.checkToggle('default','time')
+    this.getItems(event.currentTarget.checked);
+  }
+  default(){
+    this.checkToggle('title','time');
+    this.getItems(-1);
+  }
+  checkToggle(check1:any,check2:any){
+     check1=<HTMLInputElement>document.getElementById(`${check1}`);
+     check2=<HTMLInputElement>document.getElementById(`${check2}`);
+    check1!.checked=false;
+    check2!.checked=false;
   }
 }

@@ -1,12 +1,32 @@
 <div class="main">
     <div class="second">
         <div class="left">
-            <p>Hi, <b class="text-info">{{user}} </b></p>
+            <p class="text-center">Hi, <b class="text-black text-capitalize">{{user}} </b></p>
             <div class="drop">
-                <span>Sort by</span>
+            <button class="btn btn-light"> 
+                 <span>Sort by <img src="assets\icons8-expand-arrow.gif"></span>
+            </button>   
                 <div class="item">
-                    <li (click)="timeSort()">time</li>
-                    <li (click)="titleSort()">title</li>
+                    <!-- <li (click)="timeSort()">time</li> -->
+                    <!-- <li (click)="titleSort()">title</li> -->
+                    <div class="cl-toggle-switch">
+                        <label class="cl-switch">
+                          <input type="checkbox" id="default" name="default" [checked]="true"  (change)="default()">
+                          <span>Default :</span>
+                        </label>
+                      </div>
+                    <div class="cl-toggle-switch">
+                        <label class="cl-switch">
+                          <input type="checkbox" id="title" name="titleSort" (change)="titleSort($event)">
+                          <span>Title :</span>
+                        </label>
+                      </div>
+                    <div class="cl-toggle-switch1">
+                        <label class="cl-switch">
+                          <input type="checkbox" id="time" name="time" (change)="timeSort()">
+                          <span>Time :</span>
+                        </label>
+                      </div>
                 </div>
             </div>
         </div>

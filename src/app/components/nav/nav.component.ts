@@ -29,6 +29,8 @@ logout() {
   this.checkButton();
   location.reload()
 }
-
+code(){
+  window.open('https://github.com/proxolo1/Blog-Web-App',"","width:100,height:100");
+}
 } 
 

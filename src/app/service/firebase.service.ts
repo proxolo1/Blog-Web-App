@@ -20,6 +20,7 @@ export class FirebaseService {
          date:new Date().toLocaleDateString(),
          user:user!.match(/^([^@]*)@/)![1]
       });
+      
       this.listAll.push({
         title:title,
         content:content,
@@ -34,5 +35,5 @@ export class FirebaseService {
   getAll(){
     return this.db.list('blogs');
   }
-
+ 
 }

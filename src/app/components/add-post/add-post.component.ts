@@ -28,5 +28,7 @@ export class AddPostComponent implements OnInit {
     this.service.BlogContent(this.title, this.htmlContent)
     this.router.navigate(['']);
   }
- 
+  public customToolbar: Object ={
+    items: [ 'Image']
+  };
 }

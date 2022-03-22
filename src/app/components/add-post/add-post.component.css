@@ -1,8 +1,9 @@
 .main{
     width:100%;
     overflow: auto;
-    background-color: teal;
+    /* background-color: teal; */
     color: white;
+    background:linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
 .secondary{
     width: 80%;
@@ -23,9 +24,9 @@ table{
     width: 100%;
     
 }
-.e-toolbar{
+/* .e-toolbar{
     display:none;
-}
+} */
 /* #richtexteditor_1913018867_0_toolbar{
     display:none !important;
 } */
@@ -35,5 +36,9 @@ table{
     } */
     .tbl{
         display:none;
+    }
+    .e-toolbar{
+        display:block !important;
+        
     }
 }

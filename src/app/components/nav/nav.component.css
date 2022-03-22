@@ -31,4 +31,5 @@
 }
 #post,#myposts{
     font-style: italic;
+    cursor: pointer;
 }

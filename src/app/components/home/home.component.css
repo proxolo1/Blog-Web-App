@@ -12,7 +12,7 @@
     position: relative;
     top: 2vh;
     display: flex;
-    justify-content:space-around;
+    justify-content:flex-start;
 }
 .left{
     width:25%;
@@ -47,6 +47,7 @@
 
 .drop{
   /* background-color:green; */
+  display:block;
   height:auto;
   width:auto;
   text-align:center;
@@ -59,7 +60,18 @@ img{
   width:2vh;
   height: 2vh;
 }
-
+/* .search{
+  padding:0 0 4vh 20vh ;
+  
+} */
+.search input{
+  margin: 2vh auto;
+  width:18vh;
+  transition: 1s;
+}
+.search input:focus{
+  width:25vh;
+}
 /* From cssbuttons.io by @lenin55 */
 .cl-toggle-switch {
   position: relative;
@@ -228,6 +240,7 @@ img{
 }
 .frame-o{
     width:100%;
+    margin: 0;
 }
 .left{
   width:100%;

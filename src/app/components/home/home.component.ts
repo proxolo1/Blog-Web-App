@@ -18,42 +18,49 @@ export class HomeComponent implements OnInit {
 
   }
   data: any;
+  searchValue!: string;
   user: any = "please login";
-  check:any={
-    time:false,
-    title:false
+  check: any = {
+    time: false,
+    title: false
   }
   ngOnInit(): void {
     this.getItems(-1);
+    // And
+
+    // Check
   }
   getItems(val: any) {
-    console.log("Loading")
     this.service.getAll().valueChanges().subscribe(data => {
       // if(val!== null){
       //   this.data = data.sort(() => {
       //   return val;
       //   })
       // }
-      
       console.log(data)
-      // console.log('hello')
-      switch (val){
-          case true: 
-          this.data=data.sort((a:any,b:any)=>{
+
+      switch (val) {
+        case true:
+          this.data = data.sort((a: any, b: any) => {
             return a.title.localeCompare(b.title);
           });
           break;
-          case false: 
-          this.data=data.sort((a:any,b:any)=>{
+        case false:
+          this.data = data.sort((a: any, b: any) => {
             return b.title.localeCompare(a.title);
           });
           break;
-          default:
-            this.data=data.sort(()=>{
-              return val;
-            });
-            break;
+        case 'search':
+          this.data = data.filter((a: any) => a.title.toLowerCase().includes(this.searchValue.toLocaleLowerCase()) || a.user.toLowerCase().includes(this.searchValue.toLocaleLowerCase()));
+          break;
+        default:
+          this.data = data.sort(() => {
+            return val;
+          });
+          break;
+
       }
+
       let element = <HTMLElement>document.querySelector('.spinner');
       element!.style.display = "none";
     })
@@ -61,7 +68,7 @@ export class HomeComponent implements OnInit {
   }
 
   timeSort() {
-    this.checkToggle('title','default')
+    this.checkToggle('title', 'default')
     if (!this.check.time) {
       this.getItems(1);
       this.check.time = true;
@@ -70,18 +77,21 @@ export class HomeComponent implements OnInit {
     this.getItems(-1);
     this.check.time = false;
   }
-  titleSort(event:any) {
-    this.checkToggle('default','time')
+  titleSort(event: any) {
+    this.checkToggle('default', 'time')
     this.getItems(event.currentTarget.checked);
   }
-  default(){
-    this.checkToggle('title','time');
+  default() {
+    this.checkToggle('title', 'time');
     this.getItems(-1);
   }
-  checkToggle(check1:any,check2:any){
-     check1=<HTMLInputElement>document.getElementById(`${check1}`);
-     check2=<HTMLInputElement>document.getElementById(`${check2}`);
-    check1!.checked=false;
-    check2!.checked=false;
+  checkToggle(check1: any, check2: any) {
+    check1 = <HTMLInputElement>document.getElementById(`${check1}`);
+    check2 = <HTMLInputElement>document.getElementById(`${check2}`);
+    check1!.checked = false;
+    check2!.checked = false;
+  }
+  search() {
+    this.getItems('search')
   }
 }

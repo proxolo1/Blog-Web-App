@@ -5,7 +5,8 @@
             <input type="text" id="title" class="form-control" [(ngModel)]="title" placeholder="add title here...">
         </div>
         <!-- <div class="text-editor"> -->
-            <ejs-richtexteditor #exampleRTE placeholder="Add notes here.....<br> for text format use keyboard shortcuts ">
+            <label>Description : </label>
+            <ejs-richtexteditor #exampleRTE placeholder="Add notes here.....<br> for text format use keyboard shortcuts " [toolbarSettings]="customToolbar" >
                 <!-- <ng-template>
                 
             </ng-template> -->

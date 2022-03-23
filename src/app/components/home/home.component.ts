@@ -17,18 +17,45 @@ export class HomeComponent implements OnInit {
     }
 
   }
+  i:number = 0;
   data: any;
+  text:any="Hello,  Welcome"
   searchValue!: string;
   user: any = "please login";
+  key: any;
+  welcome: any;
+  header: any;
   check: any = {
     time: false,
     title: false
   }
   ngOnInit(): void {
     this.getItems(-1);
-    // And
-
     // Check
+   const time= new Date().getHours();
+   if(time>=1 && time<=6){
+     this.text=" Hey, isn't it too early to be using your computer";
+   }
+   else if(time>=7 && time<=11){
+    this.text="Good Morning";
+   }
+   else if(time>=12 && time<=14){
+     this.text=" Have you eaten lunch yet?"
+   }
+   else if(time>=15 && time<=16){
+     this.text="Good Afternoon";
+   }
+   else if(time>=17 && time<=22){
+     this.text="Good Evening! Welcome to prime time on the web!";
+   }
+   else if(time==23){
+     this.text="It's almost midnight...Aren't you sleepy yet?";
+   }
+   else if(time==0){
+    this.text="It's midnight... do you ever sleep?";
+   }
+    this.textWrite()
+
   }
   getItems(val: any) {
     this.service.getAll().valueChanges().subscribe(data => {
@@ -51,7 +78,9 @@ export class HomeComponent implements OnInit {
           });
           break;
         case 'search':
-          this.data = data.filter((a: any) => a.title.toLowerCase().includes(this.searchValue.toLocaleLowerCase()) || a.user.toLowerCase().includes(this.searchValue.toLocaleLowerCase()));
+          this.data = data.filter((a: any) =>
+            a.title.toLowerCase().includes(this.searchValue.toLocaleLowerCase())
+            || a.user.toLowerCase().includes(this.searchValue.toLocaleLowerCase())).reverse();
           break;
         default:
           this.data = data.sort(() => {
@@ -63,6 +92,7 @@ export class HomeComponent implements OnInit {
 
       let element = <HTMLElement>document.querySelector('.spinner');
       element!.style.display = "none";
+      this.pageScroll();
     })
     this.user = localStorage.getItem('userEmail')!.match(/^([^@]*)@/)![1];
   }
@@ -93,5 +123,20 @@ export class HomeComponent implements OnInit {
   }
   search() {
     this.getItems('search')
+  }
+  pageScroll() {
+    setTimeout(() => {
+      window.scrollTo(0, 740);
+
+    }, 100)
+  }
+  textWrite(){
+    
+    if(this.i<this.text.length){
+      document.getElementById('text')!.innerHTML +=this.text.charAt(this.i);
+      this.i++;
+      setTimeout(() => this.textWrite(), 100)
+      // this.textWrite()
+    }
   }
 }

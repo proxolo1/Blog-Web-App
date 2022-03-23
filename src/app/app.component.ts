@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'blog';
-  
+  ngOnInit(): void {
+   
+    window.addEventListener('offline', () =>{
+      alert('check your internet ')
+    })
+  }
 }

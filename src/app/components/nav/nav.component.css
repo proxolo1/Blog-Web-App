@@ -5,8 +5,8 @@
  img{
     width:5vh;
     height: 5vh;
-    border-radius: 30px;
-    background-color:teal;
+    /* border-radius: 30px; */
+    /* background-color:teal; */
 }
 .navbar-brand{
     font-family:'Times New Roman', Times, serif;

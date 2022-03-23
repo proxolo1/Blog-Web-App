@@ -6,14 +6,20 @@
     </div>
     <div id="blog">
         <div class="container-fluid">
-            <p class=" text-uppercase text-center  title">
+            <p class=" text-uppercase text-center  title ">
                 {{blogList.title}}
             </p>
         </div>
-        <div class="content text-focus-in">
-            <p [innerHTML]="blogList.content"></p>
-        </div>
+        <div class="content text-focus-in" [ngClass]="{'limitTextHeight': isReadMore}">
+            <p [innerHTML]="blogList.content" >
+               
+            </p> 
+           
+        </div> <span class="read flicker-1" (click)="showText()">
+                    {{ isReadMore ? 'read_more': 'read_less' }}
+        </span>
 
 
     </div>
+
 </div>

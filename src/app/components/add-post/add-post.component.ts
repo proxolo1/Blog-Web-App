@@ -18,7 +18,14 @@ export class AddPostComponent implements OnInit {
   private htmlContent! : string;
   title!:string;
   ngOnInit(): void {
-    
+  if(window.innerWidth<700){
+    this.customToolbar={
+      items:[
+        'Bold', 'Italic','Undo', 'Redo', 'CreateTable', 'Image', 'CreateLink','Alignments','Formats','BackgroundColor','FontColor','Print',
+         'UnorderedList','OrderedList'    
+    ]
+    }
+  }
   
   }
   getFormattedContent() {

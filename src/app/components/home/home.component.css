@@ -4,6 +4,7 @@
     color:darkblue;
     height: auto;
     z-index: -3;
+    overflow: hidden;
 }
 .second{
     /* width:80%; */
@@ -24,18 +25,18 @@
     display:block;
     width:100vh;
     word-wrap:break-word;
+    
 }
 .frame{
   margin-top:10vh;
   
 }
 .spinner{
-  position: absolute;
+  position: relative;
   /* width:25%;
   height:25%;
   background-color:red; */
-  top:50vh;
-  right:68vh;
+  left: 50%;
   /* border-radius:100rem;
   padding:0; */
   
@@ -71,6 +72,16 @@ img{
 }
 .search input:focus{
   width:25vh;
+}
+.scroll{
+  position:fixed;
+  right:0;
+  bottom:2vh;
+  cursor:pointer;
+}
+.scroll img{
+  height:8vh;
+  width:10vh;
 }
 /* From cssbuttons.io by @lenin55 */
 .cl-toggle-switch {
@@ -231,8 +242,35 @@ img{
 
   
 
+  .parallax {
+    /* The image used */
+    background-image: url(src\assets\spritedaway.jpg);
+    /* Set a specific height */
+    min-height: 100vh; 
   
-  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .user{
+    width: auto;
+    height: auto;
+    background-color: rgb(215 202 179);
+    position: relative;
+   top: 40vh;
+   margin: auto;
+   mix-blend-mode: screen;
+   font-size:10vh;
+   text-align: center;
+  }
+  .user span{
+    padding-left:10vh;
+  }
+ #text{
+   font-family: fantasy;
+ }
 @media screen and (max-width: 600px) {
 .second{
   display:flex;
@@ -250,4 +288,8 @@ img{
   top:55vh;
   left:25vh;
 }
+.user{
+  font-size:7vh;
+}
+
 }

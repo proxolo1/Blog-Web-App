@@ -265,9 +265,7 @@ img{
    font-size:10vh;
    text-align: center;
   }
-  .user span{
-    padding-left:10vh;
-  }
+
  #text{
    font-family: fantasy;
  }
@@ -289,7 +287,10 @@ img{
   left:25vh;
 }
 .user{
-  font-size:7vh;
+  font-size:3vh;
+  top:48vh;
 }
-
+.parallax{
+  background-image: url(https://i.pinimg.com/564x/00/97/f8/0097f8b755b155e6ede851b14902a300.jpg);
+}
 }

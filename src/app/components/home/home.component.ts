@@ -17,9 +17,9 @@ export class HomeComponent implements OnInit {
     }
 
   }
-  i:number = 0;
+  i: number = 0;
   data: any;
-  text:any="Hello,  Welcome"
+  text: any = "Hello,  Welcome"
   searchValue!: string;
   user: any = "please login";
   key: any;
@@ -30,31 +30,8 @@ export class HomeComponent implements OnInit {
     title: false
   }
   ngOnInit(): void {
+    this.checkTime();
     this.getItems(-1);
-    // Check
-   const time= new Date().getHours();
-   if(time>=1 && time<=6){
-     this.text=" Hey, isn't it too early to be using your computer";
-   }
-   else if(time>=7 && time<=11){
-    this.text="Good Morning";
-   }
-   else if(time>=12 && time<=14){
-     this.text=" Have you eaten lunch yet?"
-   }
-   else if(time>=15 && time<=16){
-     this.text="Good Afternoon";
-   }
-   else if(time>=17 && time<=22){
-     this.text="Good Evening! Welcome to prime time on the web!";
-   }
-   else if(time==23){
-     this.text="It's almost midnight...Aren't you sleepy yet?";
-   }
-   else if(time==0){
-    this.text="It's midnight... do you ever sleep?";
-   }
-    this.textWrite()
 
   }
   getItems(val: any) {
@@ -130,13 +107,38 @@ export class HomeComponent implements OnInit {
 
     }, 100)
   }
-  textWrite(){
-    
-    if(this.i<this.text.length){
-      document.getElementById('text')!.innerHTML +=this.text.charAt(this.i);
+  textWrite(txt: string) {
+
+    if (this.i < txt.length) {
+      document.getElementById('text')!.innerHTML += txt.charAt(this.i);
       this.i++;
-      setTimeout(() => this.textWrite(), 100)
+      setTimeout(() => this.textWrite(txt), 100)
       // this.textWrite()
     }
+  }
+  checkTime(){
+    const time = new Date().getHours();
+    if (time >= 1 && time <= 6) {
+      this.text = " Hey, isn't it too early to be using your computer";
+    }
+    else if (time >= 7 && time <= 11) {
+      this.text = "Good Morning";
+    }
+    else if (time >= 12 && time <= 14) {
+      this.text = " Have you eaten lunch yet?"
+    }
+    else if (time >= 15 && time <= 16) {
+      this.text = "Good Afternoon";
+    }
+    else if (time >= 17 && time <= 22) {
+      this.text = "Good Evening! Welcome to prime time on the web!";
+    }
+    else if (time == 23) {
+      this.text = "It's almost midnight...Aren't you sleepy yet?";
+    }
+    else if (time == 0) {
+      this.text = "It's midnight... do you ever sleep?";
+    }
+    this.textWrite(this.text)
   }
 }

@@ -1,22 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div class="container-fluid main">
+
+  <nav class="navbar navbar-expand-lg navbar-light ">
     <div class="container-fluid">
       <a class="navbar-brand" href="home">BLOOG</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item" >
-            <a class="nav-link disabled" id="post" aria-current="page" href="addpost" >New_post</a>
+          <li class="nav-item">
+            <a class="nav-link " id="post" aria-current="page" href="addpost">create_blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="mypost" id="myposts">My_profile</a>
+            <a class="nav-link " href="mypost" id="myposts">my_profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " (click)="code()" id="myposts">source_code</a>
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn " id="login" type="submit" [routerLink]="'login'" ><img src="assets\icons8-login-64.png">sign-in</button>
-          <button class="btn  profile" id="profile" type="submit" (click)="logout()"><img src="assets\icons8-sign-out-100.png">signout</button>
+          <button class="btn" id="login" type="submit" [routerLink]="'login'"><img
+              src="https://img.icons8.com/external-flat-icons-inmotus-design/100/000000/external-avatar-player-rounded-set-flat-icons-inmotus-design.png" /><sub>sign_in</sub></button>
+          <button class="btn  profile" id="profile" type="submit" (click)="logout()"><img
+              src="https://img.icons8.com/external-tanah-basah-glyph-tanah-basah/48/000000/external-exit-essentials-tanah-basah-glyph-tanah-basah.png" /><sub>sign_out</sub></button>
         </form>
       </div>
     </div>
   </nav>
+</div>

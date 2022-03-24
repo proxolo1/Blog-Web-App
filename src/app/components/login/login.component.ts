@@ -16,4 +16,7 @@ export class LoginComponent implements OnInit {
   login(){
     this.fauth.signIn(this.email,this.password)
   }
+  auth(){
+    this.fauth.googleAuth();
+  }
 }

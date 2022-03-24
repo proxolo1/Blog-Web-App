@@ -1,16 +1,59 @@
+<div class="parallax">
+  <div class="user">
+    <span id="text" class="text-center" ></span>
+  </div>
+</div>
 <div class="main">
-    <div class="second">
-        <div class="left">
-            <p>Hi, <b class="text-info">{{user}} </b></p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur odio, ratione cumque
-            distinctio minus aut qui consequuntur sint repudiandae at repellendus quaerat dignissimos dolore accusamus
-            nobis quisquam eveniet, veritatis cum saepe laborum soluta.</div>
-            <div class="frame-o">
-                <div class="frame" *ngFor="let item of data" class="scale-in-center">
-            <app-blog [blogList]="item"></app-blog>
+  <div class="spinner">
+    <div class="spinner-border"></div>
+  </div>
+  <div class="second">
+    <div class="left">
+      <p class="text-center">Hi, <b class="text-black text-capitalize">{{user}} </b></p>
+    
+      <div class="drop">
+        <div class="search text-center">
+            <input type=text  class=" form-control" placeholder="search title or author " autocomplete="" (keydown)="search()" [(ngModel)]="searchValue">
         </div>
-    </div> 
-            </div>
-       
+         
+        <button class="btn btn-light">
+          <span>Sort by <img src="assets\icons8-expand-arrow.gif"></span>
+        </button>
+        <div class="item">
+          <!-- <li (click)="timeSort()">time</li> -->
+          <!-- <li (click)="titleSort()">title</li> -->
+          <div class="cl-toggle-switch">
+            <label class="cl-switch">
+             
+              <input type="checkbox" id="default" name="default" [checked]="true" (change)="default()">
+              <span>Default :</span>
+            </label>
+          </div>
+          <div class="cl-toggle-switch">
+            <label class="cl-switch">
+              <input type="checkbox" id="title" name="titleSort" (change)="titleSort($event)">
+              <span>Title :</span>
+            </label>
+          </div>
+          <div class="cl-toggle-switch1">
+            <label class="cl-switch">
+              <input type="checkbox" id="time" name="time" (change)="timeSort()">
+              <span>Time :</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="frame-o">
+      <div class="frame scale-in-center" *ngFor="let item of data">
+        <app-blog [blogList]="item"></app-blog>
+      </div>
+    </div>
+  </div>
 
+
+</div>
+
+<div class="scroll">
+  <img src="https://img.icons8.com/ios-filled/100/000000/up--v1.png"/>
 </div>

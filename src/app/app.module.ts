@@ -16,6 +16,7 @@ import { BlogComponent } from './components/blog/blog.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { LoginComponent } from './components/login/login.component';
 import { MypostComponent } from './components/mypost/mypost.component';
+import { CommonModule } from '@angular/common';
 const firebaseConfig = {
   apiKey: "AIzaSyCASzpA2ldLrXv4ewpoARQzWMp42NhLgOA",
   authDomain: "bloog-proxolo.firebaseapp.com",
@@ -44,7 +45,8 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule, 
     AngularFireDatabaseModule, 
-    FormsModule
+    FormsModule,
+    CommonModule
   ],
   providers: [ToolbarService, LinkService, ImageService, HtmlEditorService, TableService,
     QuickToolbarService, MarkdownEditorService],

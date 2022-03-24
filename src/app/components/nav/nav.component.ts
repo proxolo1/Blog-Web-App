@@ -13,7 +13,6 @@ export class NavComponent implements OnInit {
     
    }
    
-   disable=false;
   ngOnInit(): void {
     this.checkButton();
   }
@@ -21,8 +20,6 @@ export class NavComponent implements OnInit {
    if(localStorage.getItem('userEmail')!=null){
     document.getElementById('login')!.style.display = 'none';
      document.getElementById('profile')!.style.display='block';
-     document.getElementById('post')!.classList.remove('disabled')
-     document.getElementById('myposts')!.classList.remove('disabled')
    }
    
    console.log('nav workd')
@@ -32,6 +29,8 @@ logout() {
   this.checkButton();
   location.reload()
 }
-
+code(){
+  window.open('https://github.com/proxolo1/Blog-Web-App',"","width:100,height:100");
+}
 } 
 
